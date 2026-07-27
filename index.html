@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Courtney Robertson — Documentation & Release Testing Portfolio</title>
+<style>
+:root{
+  --surface:#fbfaf5; --surface-soft:#fee2c3; --surface-elevated:#ffffff;
+  --ink:#241c4a; --ink-muted:#126782; --ink-soft:#4a4566;
+  --link:#126782; --link-hover:#241c4a;
+  --marker:#fb8500; --highlight:#ffb703;
+  --sky:#8ecae6; --teal:#219ebc; --deep:#023047; --peri:#bcb5e3;
+  --callout-bg:#126782; --callout-ink:#ffffff;
+  --tape:#f3e5b8;
+  --border:rgba(36,28,74,0.12); --border-strong:rgba(36,28,74,0.24);
+  --shadow:0 1px 2px rgba(36,28,74,.06), 0 8px 24px -12px rgba(36,28,74,.18);
+  --slab:Georgia,"Roboto Slab","Times New Roman",serif;
+  --body:system-ui,-apple-system,"Barlow",Segoe UI,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --measure:68ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --surface:#1a1714; --surface-soft:#023047; --surface-elevated:#251f1c;
+    --ink:#fbfaf5; --ink-muted:#bcb5e3; --ink-soft:#c8c2d8;
+    --link:#8ecae6; --link-hover:#ffb703;
+    --callout-bg:#023047; --callout-ink:#8ecae6;
+    --tape:#4a3f1c;
+    --border:rgba(188,181,227,0.15); --border-strong:rgba(188,181,227,0.30);
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--surface); color:var(--ink);
+  font-family:var(--body); font-size:17px; line-height:1.65;
+  background-image:repeating-linear-gradient(0deg,rgba(36,28,74,.014) 0 1px,transparent 1px 3px);
+}
+@media (prefers-color-scheme:dark){
+  body{background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 1px,transparent 1px 3px)}
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:2px}
+a:hover{color:var(--link-hover)}
+:focus-visible{outline:3px solid var(--highlight);outline-offset:2px;border-radius:3px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:clamp(48px,8vw,88px) 0 clamp(36px,5vw,56px);border-bottom:1px solid var(--border)}
+.blob{position:absolute;border-radius:50%;filter:blur(.5px);opacity:.5;pointer-events:none}
+.blob.a{width:340px;height:340px;background:var(--sky);top:-130px;right:-70px;opacity:.28}
+.blob.b{width:210px;height:210px;background:var(--surface-soft);bottom:-90px;left:-60px;opacity:.55}
+@media (prefers-color-scheme:dark){.blob.a{opacity:.14}.blob.b{opacity:.2}}
+.hero>*{position:relative}
+.eyebrow{font-family:var(--slab);font-weight:700;text-transform:uppercase;letter-spacing:.12em;
+  font-size:.74rem;color:var(--marker);margin:0 0 14px}
+h1{font-family:var(--slab);font-weight:800;line-height:1.08;letter-spacing:-.01em;
+  font-size:clamp(2.1rem,5.4vw,3.4rem);margin:0 0 6px;max-width:19ch}
+.rule{width:96px;height:7px;background:var(--marker);border-radius:4px;margin:18px 0 22px;
+  transform:rotate(-.6deg)}
+.lede{font-size:clamp(1.06rem,2vw,1.22rem);color:var(--ink-soft);max-width:var(--measure);margin:0 0 8px}
+.lede strong{color:var(--ink)}
+.meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.92rem;color:var(--ink-muted)}
+.meta span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--marker);flex:none}
+
+/* ---------- sections ---------- */
+section{padding:clamp(40px,6vw,64px) 0}
+section+section{border-top:1px solid var(--border)}
+h2{font-family:var(--slab);font-weight:800;font-size:clamp(1.5rem,3vw,2rem);
+  line-height:1.2;margin:0 0 10px;letter-spacing:-.01em}
+h3{font-family:var(--slab);font-weight:700;font-size:1.12rem;margin:0 0 6px;line-height:1.3}
+.sub{color:var(--ink-soft);max-width:var(--measure);margin:0 0 30px}
+p{max-width:var(--measure)}
+
+/* ---------- pillar cards ---------- */
+.pillars{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+.card{position:relative;background:var(--surface-elevated);border:1px solid var(--border);
+  border-radius:14px;padding:26px 24px 22px;box-shadow:var(--shadow);overflow:hidden;
+  display:flex;flex-direction:column}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--accent,var(--marker))}
+.card.p1{--accent:var(--sky)} .card.p2{--accent:var(--marker)} .card.p3{--accent:var(--teal)}
+.num{font-family:var(--slab);font-weight:800;font-size:.78rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent,var(--marker));margin:0 0 10px}
+.card p{font-size:.96rem;color:var(--ink-soft);margin:0 0 16px}
+.livelinks{font-size:.88rem!important;line-height:1.7}
+.livelinks a{font-weight:600;white-space:nowrap}
+.files{list-style:none;margin:4px 0 0;padding:16px 0 0;border-top:1px dashed var(--border-strong);
+  font-size:.9rem;display:grid;gap:9px;align-content:start}
+.files a{display:block;font-weight:600}
+.files em{display:block;font-style:normal;color:var(--ink-muted);font-size:.85rem;line-height:1.45}
+
+/* ---------- callout ---------- */
+.callout{background:var(--callout-bg);color:var(--callout-ink);border-radius:14px;
+  padding:26px 28px;box-shadow:var(--shadow);max-width:none}
+.callout h3{color:var(--callout-ink);margin-bottom:8px}
+.callout p{color:var(--callout-ink);opacity:.94;margin:0 0 10px;max-width:72ch}
+.callout p:last-child{margin-bottom:0}
+.callout a{color:var(--highlight)}
+
+/* ---------- path ---------- */
+.path{display:grid;gap:14px;counter-reset:step;margin:0;padding:0;list-style:none}
+.path li{position:relative;padding:16px 20px 16px 62px;background:var(--surface-elevated);
+  border:1px solid var(--border);border-radius:12px;font-size:.97rem;box-shadow:var(--shadow)}
+.path li::before{counter-increment:step;content:counter(step);position:absolute;left:18px;top:15px;
+  width:28px;height:28px;border-radius:50%;background:var(--surface-soft);color:var(--ink);
+  font-family:var(--slab);font-weight:800;font-size:.86rem;display:grid;place-items:center}
+@media (prefers-color-scheme:dark){.path li::before{background:var(--deep);color:var(--sky)}}
+.path b{font-family:var(--slab)}
+.path .t{display:block;color:var(--ink-muted);font-size:.86rem;margin-top:3px}
+
+/* ---------- table ---------- */
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--surface-elevated)}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:520px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--border);vertical-align:top}
+thead th{background:var(--sky);color:#241c4a;font-family:var(--slab);font-weight:700;
+  font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;border-bottom:none}
+@media (prefers-color-scheme:dark){thead th{background:var(--deep);color:var(--sky)}}
+tbody tr:last-child td{border-bottom:none}
+td code{font-family:var(--mono);font-size:.86em;background:var(--surface-soft);
+  padding:1px 6px;border-radius:4px;color:var(--ink)}
+@media (prefers-color-scheme:dark){td code{background:rgba(255,255,255,.07)}}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  padding:2px 8px;border-radius:99px;background:var(--surface-soft);color:var(--ink);white-space:nowrap}
+@media (prefers-color-scheme:dark){.tag{background:rgba(255,255,255,.09);color:var(--ink)}}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--border);padding:36px 0 56px;color:var(--ink-muted);font-size:.9rem}
+footer p{max-width:76ch}
+.tapebar{display:inline-block;background:var(--tape);color:var(--ink);padding:3px 12px;
+  transform:rotate(-1deg);font-family:var(--slab);font-weight:700;font-size:.8rem;border-radius:2px}
+
+@media print{
+  body{background:#fff;font-size:11pt}
+  .blob{display:none} .card,.path li,.tablewrap{box-shadow:none;break-inside:avoid}
+  section{padding:18px 0} a{text-decoration:none;color:#000}
+  .callout{background:#f2f2f2;color:#000} .callout a,.callout p,.callout h3{color:#000}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="blob a"></span><span class="blob b"></span>
+  <div class="wrap">
+    <p class="eyebrow">Portfolio · Technical writing &amp; developer documentation</p>
+    <h1>Documentation is a testable claim about behavior.</h1>
+    <div class="rule"></div>
+    <p class="lede">I'm <strong>Courtney Robertson</strong> — Senior Open Source Developer Advocate,
+    WordPress educator, IndieWeb contributor. This package collects three strands of my work that
+    usually get treated as separate jobs, and shows why I think they're one:
+    <strong>writing the docs</strong>, <strong>testing the release the docs describe</strong>, and
+    <strong>reporting what testing finds without leaking what shouldn't ship.</strong></p>
+    <p class="lede">Everything here is real work from the WordPress 7.1 release cycle
+    (July–August 2026) and from open-source plugins I maintain and ship.</p>
+    <div class="meta">
+      <span><i class="dot"></i>courtneyr.dev</span>
+      <span><i class="dot"></i>github.com/courtneyr-dev</span>
+      <span><i class="dot"></i>courane01@gmail.com</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>The three strands</h2>
+    <p class="sub">Each folder stands on its own. If you only have ten minutes, the reading path
+    further down picks one document from each.</p>
+
+    <div class="pillars">
+
+      <article class="card p1">
+        <p class="num">01 — Documentation practice</p>
+        <h3>Docs I write for my own projects</h3>
+        <p><strong>Four published documentation sites</strong> for plugins I maintain and ship on
+        WordPress.org, plus developer docs written for the FAIR decentralized-distribution project.
+        And the audit methods that keep docs matching the software: a coverage map, a completeness
+        receipt, and a label-diff pass against the running UI.</p>
+        <p class="livelinks"><b>Live docs →</b>
+        <a href="https://courtneyr-dev.github.io/post-formats-for-block-themes/">Post Formats</a> ·
+        <a href="https://courtneyr-dev.github.io/post-kinds-for-indieweb/">Post Kinds</a> ·
+        <a href="https://courtneyr-dev.github.io/outpost/">Outpost</a> ·
+        <a href="https://courtneyr-dev.github.io/link-extension-for-xfn/">XFN</a></p>
+        <ul class="files">
+          <li><a href="1-documentation-practice/01-docs-in-my-own-projects.md">01 · Docs in my own projects</a>
+            <em>Four published docs sites, FAIR developer docs, CI gates, and release automation.</em></li>
+          <li><a href="1-documentation-practice/02-coverage-map-and-gap-analysis.md">02 · Coverage map &amp; gap analysis</a>
+            <em>What the release claims vs. what I verified — with the gaps published as gaps.</em></li>
+          <li><a href="1-documentation-practice/03-change-coverage-receipt.md">03 · Change-coverage receipt</a>
+            <em>Reconciling release notes against git, packages, lockfiles, and shipped defaults.</em></li>
+          <li><a href="1-documentation-practice/04-ui-verification-and-label-diff.md">04 · UI verification &amp; label diff</a>
+            <em>The pass that caught draft copy naming two controls that don't exist.</em></li>
+          <li><a href="1-documentation-practice/05-release-tracking-cadence.md">05 · Release-tracking cadence</a>
+            <em>The source hierarchy, and why knowledge decays in about 48 hours mid-beta.</em></li>
+        </ul>
+      </article>
+
+      <article class="card p2">
+        <p class="num">02 — Release testing</p>
+        <h3>Testing a release the docs describe</h3>
+        <p>The operating loop for a release train with weekly drops: environments grouped by
+        <strong>when they can actually be tested</strong>, a four-phase per-drop loop, an explicit
+        definition of done — plus the public testing tooling I built and shipped for the prior
+        WordPress cycle.</p>
+        <ul class="files">
+          <li><a href="2-release-testing/06-beta-rc-testing-runbook.md">06 · Beta/RC runbook</a>
+            <em>Per-drop operating loop, environments grouped by update timing, definition of done.</em></li>
+          <li><a href="2-release-testing/07-public-testing-tooling.md">07 · Public testing tooling</a>
+            <em>A 123-step Playwright runner and a Playground blueprint, both shipped publicly.</em></li>
+        </ul>
+      </article>
+
+      <article class="card p3">
+        <p class="num">03 — Security testing, disclosed responsibly</p>
+        <h3>Reporting findings without disclosing them</h3>
+        <p>A complete methods report I sent to a member of the WordPress Security Team — public
+        references only, with one security-classified finding reduced to a bare acknowledgment and
+        every trace scrubbed. Plus the evidence standard that decides when a claim is true, and the
+        handoff standard that governs what leaves my hands.</p>
+        <ul class="files">
+          <li><a href="3-security-methods/08-methods-report-wordpress-7-1-beta.md">08 · Methods report</a>
+            <em>Findings, honest gaps, verbatim reusable prompts, tooling labeled by actual use.</em></li>
+          <li><a href="3-security-methods/09-evidence-and-validation-standard.md">09 · Evidence standard</a>
+            <em>Gate ladder, 20-step validation loop, required controls, safe-proof limits.</em></li>
+          <li><a href="3-security-methods/10-audit-handoff-standard.md">10 · Handoff standard</a>
+            <em>Link hygiene, confidentiality scrubbing, and labeling every tool by actual use.</em></li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>A ten-minute path</h2>
+    <p class="sub">In order, if you want the argument rather than the archive.</p>
+    <ol class="path">
+      <li><b>The source hierarchy</b> — <a href="1-documentation-practice/05-release-tracking-cadence.md">05 · Release-tracking cadence</a>
+        <span class="t">Two facts we'd written down went stale in 48 hours. The retro explains why, and produces a
+        ranking that resolves source conflicts deterministically — a runtime test beats a dev note beats the diff beats memory.</span></li>
+      <li><b>The audit that finds the gaps</b> — <a href="1-documentation-practice/02-coverage-map-and-gap-analysis.md">02 · Coverage map</a>
+        <span class="t">Everything the release claims, cross-referenced against what was actually verified,
+        each gap carrying its authoritative source. A gap you've written down is a task; one you haven't is a future correction.</span></li>
+      <li><b>The loop that runs it</b> — <a href="2-release-testing/06-beta-rc-testing-runbook.md">06 · Beta/RC runbook</a>
+        <span class="t">Environments grouped by when they can actually be tested, a four-phase per-drop
+        loop, and a definition of done you can hand to someone else.</span></li>
+      <li><b>The report at the end</b> — <a href="3-security-methods/08-methods-report-wordpress-7-1-beta.md">08 · Methods report</a>
+        <span class="t">What all of it produces: a self-contained document a stranger can act on, including
+        the section most reports omit — what I did <em>not</em> cover.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Skills &amp; tooling</h2>
+    <p class="sub">I package repeatable methods as agent skills so the format is enforced rather than
+    remembered. Eleven are published under CC0, alongside a separate CC0 documentation-and-training prompt set; the rest are local. Full index with usage labels:
+    <a href="skills-and-tooling.md"><strong>skills-and-tooling.md</strong></a></p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Skill</th><th>What it does</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr><td><code>wordpress-testing</code></td><td>PHPUnit, WP_Mock, PHPCS, Playwright E2E, CI workflows</td><td><a href="https://github.com/courtneyr-dev/wp-dev-prompts/tree/main/skills">Public · CC0</a></td></tr>
+          <tr><td><code>wordpress-security</code></td><td>Sanitize / validate / escape; nonces, capabilities, injection prevention</td><td><a href="https://github.com/courtneyr-dev/wp-dev-prompts/tree/main/skills">Public · CC0</a></td></tr>
+          <tr><td><code>wordpress-dev</code></td><td>Plugin architecture, block development, block themes, REST</td><td><a href="https://github.com/courtneyr-dev/wp-dev-prompts/tree/main/skills">Public · CC0</a></td></tr>
+          <tr><td><code>wordpress-accessibility</code></td><td>WCAG 2.1/2.2 AA, keyboard nav, screen-reader testing, ARIA, contrast</td><td><a href="https://github.com/courtneyr-dev/wp-dev-prompts/tree/main/skills">Public · CC0</a></td></tr>
+          <tr><td><code>wordpress-playground</code></td><td>Browser-based test and demo environments via blueprints</td><td><a href="https://github.com/courtneyr-dev/wp-dev-prompts/tree/main/skills">Public · CC0</a></td></tr>
+          <tr><td><code>wordpress-performance</code></td><td>Core Web Vitals, profiling, caching, asset loading</td><td><a href="https://github.com/courtneyr-dev/wp-dev-prompts/tree/main/skills">Public · CC0</a></td></tr>
+          <tr><td><code>wordpress-audit-handoff</code></td><td>The packaging standard this portfolio was built under</td><td><span class="tag">local only</span></td></tr>
+          <tr><td><code>wp-screenshots</code></td><td>Login-aware headless capture; hides notices, 2× DPR, HTML gallery</td><td><a href="https://github.com/courtneyr-dev/wp-dev-prompts/tree/main/skills/wp-screenshots">Public · CC0</a></td></tr>
+          <tr><td><code>wp-github-actions</code></td><td>CI/CD for plugins — standards, tests, Playground previews, wp.org deploy</td><td><span class="tag">local only</span></td></tr>
+          <tr><td><code>wp-readme-optimizer</code></td><td>Structured audit + rewrite of WordPress.org plugin listings</td><td><span class="tag">local only</span></td></tr>
+          <tr><td><code>ui-ux-audit</code></td><td>Interaction audit methodology and motion specifications</td><td><a href="https://github.com/courtneyr-dev/wp-dev-prompts/tree/main/skills">Public · CC0</a></td></tr>
+          <tr><td><code>prompt-engineering</code></td><td>Prompt structure and token optimization</td><td><a href="https://github.com/courtneyr-dev/wp-dev-prompts/tree/main/skills">Public · CC0</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="callout">
+      <h3>What's deliberately not in here</h3>
+      <p>This package contains <strong>public references only</strong>. Every external link was verified
+      to resolve for a logged-out visitor, and every referenced tracker ticket was checked against the
+      tracker's own API on July 27, 2026.</p>
+      <p>One security-classified finding from the 7.1 work was responsibly disclosed through a private
+      channel. It appears here as a bare acknowledgment — no mechanism, location, severity, or
+      reproduction — and the package was grepped to confirm zero traces remain. That scrubbing
+      procedure is itself documented in
+      <a href="3-security-methods/10-audit-handoff-standard.md">10 · Handoff standard</a>, because
+      knowing how to <em>not</em> publish something is part of the job.</p>
+      <p>Where a method came out of production work, infrastructure specifics — hostnames, connection
+      configuration, stack fingerprints, and other people's names — are omitted. What's left is the
+      transferable part: the method, and why it's shaped the way it is.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="tapebar">Courtney Robertson · July 2026</p>
+    <p style="margin-top:16px">Every document in this package is plain Markdown, readable in any editor
+    or on GitHub. This page needs no network connection — open it from the unzipped folder and the
+    links work locally.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,7 +1,11 @@
 # Documentation in my own projects
 
 Published documentation sites, the repositories behind them, and the distribution listings they
-support. **Every link below was verified to return 200 for a logged-out visitor.**
+support. **Every link below was verified for a logged-out visitor** — and for
+WordPress.org plugin listings, verified against the plugins API
+(`api.wordpress.org/plugins/info/1.2/`), because the listing URL for an unpublished slug
+soft-redirects to a search page that still returns 200. A bare status-code check cannot
+tell a real listing from that redirect; the API answers honestly.
 
 These are where I set the documentation standard rather than inherit it, so they show what I
 actually think good developer documentation looks like: **a real documentation site rather than a
@@ -15,8 +19,8 @@ contributions, and a security policy that routes reports somewhere private.
 | Project | Documentation site | Source | Distribution |
 |---|---|---|---|
 | Post Formats for Block Themes | [docs](https://courtneyr-dev.github.io/post-formats-for-block-themes/) | [repo](https://github.com/courtneyr-dev/post-formats-for-block-themes) | [WordPress.org](https://wordpress.org/plugins/post-formats-for-block-themes/) |
-| Post Kinds for IndieWeb | [docs](https://courtneyr-dev.github.io/post-kinds-for-indieweb/) | [repo](https://github.com/courtneyr-dev/post-kinds-for-indieweb) | [WordPress.org](https://wordpress.org/plugins/post-kinds-for-indieweb/) |
-| Outpost | [docs](https://courtneyr-dev.github.io/outpost/) | [repo](https://github.com/courtneyr-dev/outpost) | [WordPress.org](https://wordpress.org/plugins/outpost/) |
+| Post Kinds for IndieWeb | [docs](https://courtneyr-dev.github.io/post-kinds-for-indieweb/) | [repo](https://github.com/courtneyr-dev/post-kinds-for-indieweb) | directory submission pending |
+| Outpost | [docs](https://courtneyr-dev.github.io/outpost/) | [repo](https://github.com/courtneyr-dev/outpost) | directory submission pending |
 | Link Extension for XFN | [docs](https://courtneyr-dev.github.io/link-extension-for-xfn/) | [repo](https://github.com/courtneyr-dev/link-extension-for-xfn) | [WordPress.org](https://wordpress.org/plugins/link-extension-for-xfn/) |
 | FAIR Beacon | — | [repo (docs in `/docs`)](https://github.com/courtneyr-dev/fair-beacon-docs) | — |
 | WordPress Dev Prompts | — | [repo](https://github.com/courtneyr-dev/wp-dev-prompts) | CC0 |
@@ -68,10 +72,10 @@ publishing a GitHub release triggers automated deployment to the WordPress.org d
 
 **Docs: https://courtneyr-dev.github.io/post-kinds-for-indieweb/**
 Source: https://github.com/courtneyr-dev/post-kinds-for-indieweb ·
-Listing: https://wordpress.org/plugins/post-kinds-for-indieweb/
+Listing: not yet in the WordPress.org directory (submission pending)
 
 Publishing what you read, watch, listen to, play, and where you check in — with correct
-microformats2 markup on every post. A modern successor to the classic IndieWeb plugin: 22 blocks,
+microformats2 markup on every post. A modern successor to the classic IndieWeb plugin: 36 kinds, 27 blocks,
 integrations against several open media APIs, bulk import, and webhook support for real-time
 scrobbling.
 
@@ -90,7 +94,7 @@ the public one.
 
 **Docs: https://courtneyr-dev.github.io/outpost/**
 Source: https://github.com/courtneyr-dev/outpost ·
-Listing: https://wordpress.org/plugins/outpost/
+Listing: not yet in the WordPress.org directory (submission pending)
 
 A mobile-first progressive web app composer for IndieWeb POSSE publishing — quick notes, replies,
 likes, photos, and life-tracking from a phone, on your own domain, with one-tap syndication.

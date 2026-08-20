@@ -54,6 +54,7 @@ If you have ten minutes, read these four in order:
 |---|---|
 | [06 · Beta/RC runbook](2-release-testing/06-beta-rc-testing-runbook.md) | Per-drop operating loop, environments grouped by update timing, definition of done |
 | [07 · Public testing tooling](2-release-testing/07-public-testing-tooling.md) | A 123-step Playwright runner and a Playground blueprint, both shipped publicly |
+| [11 · External-PR audit case](2-release-testing/11-external-pr-audit-case-study.md) | Two contributor PRs, worked end to end: held CI, a green suite hiding a regression, guards proven to bite, a runtime-backed compat bump |
 
 ### 3 · Security methods
 

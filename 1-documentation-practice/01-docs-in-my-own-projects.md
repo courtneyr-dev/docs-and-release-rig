@@ -77,7 +77,7 @@ scrobbling.
 
 - **Docs:** Astro Starlight site, published as above
 - **Testing:** PHPUnit (`composer test`), Playwright end-to-end (`npm run test:e2e`)
-- **Gates:** PHPCS, PHPStan level 6, ESLint, Stylelint, GitHub Actions on every pull request
+- **Gates:** PHPCS, PHPStan level 5 (`phpstan.neon`; baseline worked off incrementally), ESLint, Stylelint, GitHub Actions on every pull request
 - **Governance:** `CONTRIBUTING.md` with branch-naming conventions, a dedicated `TESTING.md`, and a
   `SECURITY.md` routing vulnerability reports through **private GitHub Security Advisories** rather
   than public issues

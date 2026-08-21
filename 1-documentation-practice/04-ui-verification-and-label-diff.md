@@ -1,5 +1,9 @@
 # UI verification & the label-diff report
 
+<!-- canonical-source-banner -->
+> **The reusable method here is now canonical in the agent skill.** It lives in executable form at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`workflows/verify-ui.md`](../skills/comprehensive-documentation-engineering/workflows/verify-ui.md) · [`references/ui-verification.md`](../skills/comprehensive-documentation-engineering/references/ui-verification.md) · [`templates/ui-label-diff.md`](../skills/comprehensive-documentation-engineering/templates/ui-label-diff.md). This page is kept as the **real-work provenance**: the retro, worked example, and prompts that produced the rule. For the current method, follow the skill; read this for the evidence behind it.
+
+
 **Retro from a real screenshot and fact-check pass, July 2026.**
 
 The claim this file defends: **the screenshot pass and the wording fact-check are the

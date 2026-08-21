@@ -1,5 +1,9 @@
 # Coverage map & gap analysis
 
+<!-- canonical-source-banner -->
+> **The reusable method here is now canonical in the agent skill.** It lives in executable form at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`references/release-documentation.md`](../skills/comprehensive-documentation-engineering/references/release-documentation.md) · [`templates/coverage-map.md`](../skills/comprehensive-documentation-engineering/templates/coverage-map.md) · [`workflows/test-release.md`](../skills/comprehensive-documentation-engineering/workflows/test-release.md). This page is kept as the **real-work provenance**: the retro, worked example, and prompts that produced the rule. For the current method, follow the skill; read this for the evidence behind it.
+
+
 The core documentation-audit artifact. It answers one question honestly: **for
 everything this release claims to ship, which claims have we actually verified, and
 which are we repeating on faith?**

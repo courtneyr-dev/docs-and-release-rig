@@ -1,5 +1,9 @@
 # Evidence & validation standard
 
+<!-- canonical-source-banner -->
+> **The reusable method here is now canonical in the agent skill.** It lives in executable form at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`references/evidence-and-validation.md`](../skills/comprehensive-documentation-engineering/references/evidence-and-validation.md) · [`templates/evidence-bundle.md`](../skills/comprehensive-documentation-engineering/templates/evidence-bundle.md) · [`templates/security-finding.md`](../skills/comprehensive-documentation-engineering/templates/security-finding.md). This page is kept as the **real-work provenance**: the retro, worked example, and prompts that produced the rule. For the current method, follow the skill; read this for the evidence behind it.
+
+
 The bar a claim has to clear before it gets written down as true. This is the piece
 that makes the rest of the process trustworthy: without an explicit evidence ladder,
 "we tested it" and "it seemed fine" look identical in a report.

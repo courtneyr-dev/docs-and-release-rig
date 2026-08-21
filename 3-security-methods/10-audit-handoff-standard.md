@@ -1,5 +1,9 @@
 # Audit handoff standard
 
+<!-- canonical-source-banner -->
+> **The reusable method here is now canonical in the agent skill.** It lives in executable form at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`workflows/security-audit-handoff.md`](../skills/comprehensive-documentation-engineering/workflows/security-audit-handoff.md) · [`references/security-documentation.md`](../skills/comprehensive-documentation-engineering/references/security-documentation.md) · [`templates/audit-handoff.md`](../skills/comprehensive-documentation-engineering/templates/audit-handoff.md). This page is kept as the **real-work provenance**: the retro, worked example, and prompts that produced the rule. For the current method, follow the skill; read this for the evidence behind it.
+
+
 My standard for packaging audit or testing results for another human. It is written as
 an executable specification — I keep it as an agent skill so the format is enforced
 rather than remembered.

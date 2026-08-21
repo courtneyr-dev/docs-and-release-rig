@@ -1,5 +1,9 @@
 # WordPress 7.1 Beta testing & security-audit methodology
 
+<!-- canonical-source-banner -->
+> **Provenance for the agent skill.** The transferable pattern in this page is generalized in the skill at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`references/security-documentation.md`](../skills/comprehensive-documentation-engineering/references/security-documentation.md) · [`references/evidence-and-validation.md`](../skills/comprehensive-documentation-engineering/references/evidence-and-validation.md) · [`references/beta-rc-testing.md`](../skills/comprehensive-documentation-engineering/references/beta-rc-testing.md). This page is the unique real-work record behind it.
+
+
 **From:** Courtney Robertson
 **Date:** July 22, 2026
 **Builds covered:** WordPress 7.1 Beta 2 (July 17, 2026) and Beta 3 (July 22, 2026)

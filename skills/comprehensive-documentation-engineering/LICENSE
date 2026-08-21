@@ -1,0 +1,77 @@
+comprehensive-documentation-engineering — licensing
+====================================================
+
+This package is dual-licensed by file, because it combines original work with
+adaptations of material published under CC BY-SA 4.0. A skill built on someone
+else's methodology inherits that methodology's license wherever it reproduces
+the methodology's text.
+
+--------------------------------------------------------------------------------
+1. CC BY-SA 4.0 — reference sheets adapting Diátaxis doctrine
+--------------------------------------------------------------------------------
+
+The following files adapt content from Diátaxis (https://diataxis.fr),
+copyright (c) Daniele Procida, licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License
+(https://creativecommons.org/licenses/by-sa/4.0/). Under the ShareAlike
+condition these adaptations are also licensed CC BY-SA 4.0, and each file
+carries an attribution header naming its source pages and the changes made:
+
+  references/diataxis-foundations.md
+  references/compass-and-classification.md
+  references/tutorials.md
+  references/how-to-guides.md
+  references/reference.md
+  references/explanation.md
+  references/anti-patterns.md                 (Diátaxis-derived portions)
+  references/information-architecture.md       (complex-hierarchies portions)
+  references/style-overrides.md                (per-quadrant "default" portion)
+  references/accessibility-and-localization.md (translation-practice portion)
+
+references/diagrams.md additionally describes the C4 model by Simon Brown
+(https://c4model.com), whose content is licensed CC BY 4.0; that material is
+attributed in the file's header. The remainder of diagrams.md is MIT.
+
+--------------------------------------------------------------------------------
+2. MIT License — original workflow, logic, tooling, and synthesis
+--------------------------------------------------------------------------------
+
+Everything else — SKILL.md, workflows/, templates/, scripts/, tests/,
+provenance/, README.md, CHANGELOG.md, CITATION.cff, and reference files that are
+original or derive only from MIT/Apache-2.0/CC0 sources — is licensed under the
+MIT License:
+
+Copyright (c) 2026 Courtney Robertson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+3. Upstream attributions
+--------------------------------------------------------------------------------
+
+Methods and ideas (not copyrightable expression) were also drawn from, and are
+credited to: Romain Lespinasse (agent-skills, MIT); Keith Patton
+(diataxis-agent-skill, CC BY-SA 4.0); Peter Knego (diataxis-docs-skill, MIT AND
+CC-BY-SA-4.0); Sam McLeod (agentic-coding, Apache-2.0); Anivar Aravind
+(developer-docs-framework, MIT, itself building on Google OpenDocs [Apache-2.0],
+the Good Docs Project [CC BY 4.0], and the Google Developer Documentation Style
+Guide [CC BY 4.0]); and Courtney Robertson (docs-and-release-rig, CC0 1.0).
+Full detail: references/source-provenance.md and provenance/research-report.md.
+
+No source author endorses this combined work.

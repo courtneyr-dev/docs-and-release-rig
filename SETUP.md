@@ -1,14 +1,46 @@
 # Setup — installing the rig
 
-How to actually run this, rather than just read it. Four layers, each independently useful. Start
-at layer 1; you can stop after any of them.
+How to actually run this, rather than just read it. Five layers, each independently useful. Start
+at layer 0 — the documentation-engineering skill that packages the whole rig — then go deeper as needed.
 
 | Layer | What you get | Time |
 |---|---|---|
+| [0 · The documentation-engineering skill](#0--the-documentation-engineering-skill) | The whole rig as one portable agent skill | 2 min |
 | [1 · Prompts and skills](#1--prompts-and-skills) | The reusable methods, in your AI coding tool | 5 min |
 | [2 · Test environments](#2--test-environments) | Disposable WordPress you can break | 10 min |
 | [3 · Automated testing](#3--automated-testing) | A 123-step Playwright runner | 15 min |
 | [4 · Docs sites and CI](#4--docs-sites-and-ci) | The documentation and pipeline setup | 30 min |
+
+---
+
+## 0 · The documentation-engineering skill
+
+The methods, standards, and prompts in this repo are packaged as one portable agent skill:
+[`skills/comprehensive-documentation-engineering/`](skills/comprehensive-documentation-engineering/).
+This is the canonical, executable form — the numbered docs are its provenance. Install it into
+Claude Code:
+
+```bash
+# from a clone of this repo
+cp -R skills/comprehensive-documentation-engineering ~/.claude/skills/
+```
+
+Or symlink the clone so edits/pulls take effect live (remove any existing dir first):
+
+```bash
+ln -s "$(pwd)/skills/comprehensive-documentation-engineering" ~/.claude/skills/comprehensive-documentation-engineering
+```
+
+Other runtimes recognize `.cursor/skills/`, `.codex/skills/`, and the cross-runtime
+`~/.agents/skills/`. Verify it's structurally sound before relying on it:
+
+```bash
+cd skills/comprehensive-documentation-engineering
+python3 scripts/validate_skill.py && python3 tests/check_evals.py tests/evals.json
+```
+
+The skill carries its own dual MIT + CC BY-SA 4.0 license (see its `LICENSE`), separate from this
+repo's CC0.
 
 ---
 

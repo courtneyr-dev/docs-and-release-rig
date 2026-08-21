@@ -1,0 +1,19 @@
+{
+  "role": "application",
+  "children": [
+    { "role": "menubar", "name": "Editor top bar", "children": [
+      { "role": "menuitem", "name": "View" },
+      { "role": "menuitem", "name": "Tools" }
+    ]},
+    { "role": "menu", "name": "View", "children": [
+      { "role": "menuitemcheckbox", "name": "Responsive styles" }
+    ]},
+    { "role": "combobox", "name": "Pseudo state", "children": [
+      { "role": "option", "name": "Default" },
+      { "role": "option", "name": "Hover" },
+      { "role": "option", "name": "Focus" },
+      { "role": "option", "name": "Focus-visible" },
+      { "role": "option", "name": "Active" }
+    ]}
+  ]
+}

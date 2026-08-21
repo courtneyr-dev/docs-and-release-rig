@@ -1,5 +1,9 @@
 # Release-tracking cadence — staying current on a moving release
 
+<!-- canonical-source-banner -->
+> **The reusable method here is now canonical in the agent skill.** It lives in executable form at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`references/release-documentation.md`](../skills/comprehensive-documentation-engineering/references/release-documentation.md) · [`references/evidence-and-validation.md`](../skills/comprehensive-documentation-engineering/references/evidence-and-validation.md). This page is kept as the **real-work provenance**: the retro, worked example, and prompts that produced the rule. For the current method, follow the skill; read this for the evidence behind it.
+
+
 **Date:** July 24, 2026 · **Cycle:** WordPress 7.1 (Beta 1 July 15 → GA August 19)
 
 The core lesson, stated plainly: **during an active beta → RC → GA cycle, our knowledge

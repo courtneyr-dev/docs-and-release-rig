@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+title: "Comprehensive Documentation Engineering (agent skill)"
+message: "If you use this skill, please cite it as below, and cite Diátaxis separately per its colophon."
+type: software
+authors:
+  - name: "Courtney Robertson"
+abstract: >-
+  An agent skill that treats documentation as an engineering practice,
+  synthesizing the Diátaxis framework with documentation auditing, information
+  architecture, developer experience, governance, release testing, UI
+  verification, evidence discipline, and security-safe reporting. Dual-licensed
+  MIT AND CC-BY-SA-4.0 by file.
+license: "MIT AND CC-BY-SA-4.0"
+version: "1.0.0"
+date-released: "2026-08-20"
+keywords:
+  - documentation
+  - diataxis
+  - technical-writing
+  - agent-skills
+  - developer-experience
+  - release-testing
+  - documentation-audit
+references:
+  - type: website
+    title: "Diátaxis"
+    authors:
+      - family-names: Procida
+        given-names: Daniele
+    url: "https://diataxis.fr"
+    notes: >-
+      The Diátaxis framework is the work of Daniele Procida. This skill adapts
+      the framework (reference sheets under CC BY-SA 4.0) and is not endorsed by
+      the author. Authoritative source: diataxis.fr.
+  - type: software
+    title: "Diátaxis Documentation Framework"
+    authors:
+      - family-names: Procida
+        given-names: Daniele
+    repository-code: "https://github.com/evildmp/diataxis-documentation-framework"
+    license: CC-BY-SA-4.0
+  - type: software
+    title: "agent-skills"
+    authors:
+      - name: "Romain Lespinasse"
+    repository-code: "https://github.com/rlespinasse/agent-skills"
+    license: MIT
+  - type: software
+    title: "diataxis-agent-skill"
+    authors:
+      - name: "Keith Patton"
+    repository-code: "https://github.com/keithpatton/diataxis-agent-skill"
+    license: CC-BY-SA-4.0
+  - type: software
+    title: "diataxis-docs-skill"
+    authors:
+      - name: "Peter Knego"
+    repository-code: "https://github.com/peterknego/diataxis-docs-skill"
+    license: "MIT AND CC-BY-SA-4.0"
+  - type: software
+    title: "agentic-coding (writing-documentation-with-diataxis)"
+    authors:
+      - name: "Sam McLeod"
+    repository-code: "https://github.com/sammcj/agentic-coding"
+    license: Apache-2.0
+  - type: software
+    title: "developer-docs-framework"
+    authors:
+      - name: "Anivar Aravind"
+    repository-code: "https://github.com/anivar/developer-docs-framework"
+    license: MIT
+  - type: software
+    title: "docs-and-release-rig"
+    authors:
+      - name: "Courtney Robertson"
+    repository-code: "https://github.com/courtneyr-dev/docs-and-release-rig"
+    license: CC0-1.0

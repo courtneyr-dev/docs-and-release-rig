@@ -1,5 +1,9 @@
 # Beta/RC testing runbook — how each release drop gets tested
 
+<!-- canonical-source-banner -->
+> **The reusable method here is now canonical in the agent skill.** It lives in executable form at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`references/beta-rc-testing.md`](../skills/comprehensive-documentation-engineering/references/beta-rc-testing.md) · [`workflows/test-release.md`](../skills/comprehensive-documentation-engineering/workflows/test-release.md) · [`templates/release-test-report.md`](../skills/comprehensive-documentation-engineering/templates/release-test-report.md). This page is kept as the **real-work provenance**: the retro, worked example, and prompts that produced the rule. For the current method, follow the skill; read this for the evidence behind it.
+
+
 **Context:** written for the WordPress 7.1 cycle (Beta 3 → RC1 → RC2 → GA), and
 generalizable to any release train with weekly drops.
 

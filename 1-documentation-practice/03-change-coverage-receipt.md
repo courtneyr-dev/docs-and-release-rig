@@ -1,5 +1,9 @@
 # Change-coverage receipt
 
+<!-- canonical-source-banner -->
+> **The reusable method here is now canonical in the agent skill.** It lives in executable form at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`workflows/document-a-change.md`](../skills/comprehensive-documentation-engineering/workflows/document-a-change.md) · [`templates/change-coverage-receipt.md`](../skills/comprehensive-documentation-engineering/templates/change-coverage-receipt.md). This page is kept as the **real-work provenance**: the retro, worked example, and prompts that produced the rule. For the current method, follow the skill; read this for the evidence behind it.
+
+
 A deterministic completeness check, produced **before** declaring a change review
 complete. It exists because "we looked at everything" is an opinion, and an opinion is
 not a stop condition.
@@ -19,54 +23,18 @@ a value in it. A blank row is not a failure — it is a recorded untested area, 
 legitimate and honest place to stop. What is *not* legitimate is a blank row that nobody
 noticed.
 
-## Completeness reconciliation checklist
+## The reconciliation checklist, the receipt, and the gate
 
-Each line is a reconciliation between two independent representations of the same
-change. Where they disagree, something is undocumented:
-
-- [ ] git changes reconciled with release notes
-- [ ] source reconciled with the released packages
-- [ ] documented deprecations reconciled with `@deprecated` annotations **and** runtime behavior
-- [ ] API changes reconciled with tests
-- [ ] dependency changes reconciled with lockfiles
-- [ ] feature flags reconciled with shipped defaults
-- [ ] internal plans reconciled with what actually shipped
-- [ ] shipped changes absent from public notes — identified
-- [ ] announced changes that did not ship — identified
-- [ ] reverted or partially reverted work — identified
-- [ ] changes present only in generated artifacts — identified
-
-The last four are the ones that catch real documentation bugs. "Announced but did not
+The 11-line reconciliation checklist, the fill-in receipt table, and the hard gate ("any
+blank row = not complete") that used to be restated here are now the canonical, ready-to-fill
+artifact in the skill: [`templates/change-coverage-receipt.md`](../skills/comprehensive-documentation-engineering/templates/change-coverage-receipt.md),
+driven by [`workflows/document-a-change.md`](../skills/comprehensive-documentation-engineering/workflows/document-a-change.md).
+Kept here is the one line that most often gets skipped and catches the most real
+documentation bugs: **the last four reconciliations — shipped-but-unannounced, announced-but-did-not-ship,
+reverted work, and changes present only in generated artifacts.** "Announced but did not
 ship" is exactly the React 19 error described in the release-tracking file — the
 announcement existed, so the claim felt sourced, but reconciling it against the shipped
 tree would have caught it.
-
-## The receipt
-
-Filled in on each application:
-
-| Field | Value |
-|---|---|
-| Baseline → target | |
-| Commits / tags reviewed | |
-| Releases reviewed | |
-| Files changed | |
-| Public APIs changed | |
-| Hooks changed | |
-| Routes changed | |
-| Schemas changed | |
-| Dependencies changed | |
-| Deprecations reviewed | |
-| Removals reviewed | |
-| Undocumented changes found | |
-| **Entries NOT fully reviewed, and why** | |
-
-## The gate
-
-If any row above is blank, or any checklist box is unchecked, the change review is
-**not complete**. Record the shortfall as a named untested area. Do not paper over it.
-
-A nondeterministic "looks done" is not a stop condition.
 
 ---
 

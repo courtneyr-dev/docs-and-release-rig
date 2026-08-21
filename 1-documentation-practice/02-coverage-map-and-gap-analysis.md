@@ -41,7 +41,12 @@ Also excluded by default: any draft or preview URL carrying a preview token, int
 chat archive links, and shared drive assets. Those get swapped for public URLs once the
 official docs publish — which for this cycle was around RC1.
 
-## Structure of the map
+## What this cycle's map contained
+
+The map's shape — dated update log, verified-first-hand list, audience-grouped gap table,
+quality-of-life cluster, cross-links — is now the fill-in template in the skill
+([`templates/coverage-map.md`](../skills/comprehensive-documentation-engineering/templates/coverage-map.md)).
+What follows is what that shape *held* for WordPress 7.1: the evidence, not the recipe.
 
 **1. A dated update log at the top.** Sources move; the map records when. A real entry
 from this cycle:
@@ -104,18 +109,6 @@ belonged in an operations brief and was missing from it. The coverage map is oft
 where you discover a gap in a *different* document.
 
 ---
-
-## What the map is for
-
-Three concrete outputs:
-
-1. **Lead from what was verified first-hand.** That section is original by construction.
-2. **Fill the developer section from the gap table.** The gaps are, reliably, the
-   under-covered material — everyone else is paraphrasing the same summary, so the
-   items nobody tested are the items nobody wrote up well.
-3. **Convert every remaining gap into either a test or an honestly-labeled description.**
-   A row that stays `untested` may still be documented — it just gets written from its
-   authoritative source and never described as verified.
 
 ## The rule underneath all of it
 

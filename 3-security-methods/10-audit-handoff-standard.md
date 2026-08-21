@@ -12,61 +12,18 @@ rather than remembered.
 easiest audit is to verify that every link in every file here resolves for you as a
 logged-out visitor.
 
----
+## What this standard became
 
-## Output rules
+The standard is now enforced by the skill's handoff mode rather than remembered — one copy
+to keep current:
 
-- **One file, fully self-contained.** No internal wiki-links, no local filesystem paths.
-  The recipient has neither my notes system nor my machine. Inline the content, or link
-  a public URL. The only acceptable links are public ones.
-- **Verify every repository link is public *before* including it.** Check with an
-  authenticated CLI query for the private flag, or an anonymous request expecting a 200
-  and not a 404. **Never link a private repository** — the recipient gets a 404 and,
-  worse, silently loses the evidence you meant to show them. If a tool lives in a private
-  repository, describe it by name and author instead of linking it.
-- **A confidentiality banner at the top**, matched to the audience.
-- **Re-verify findings live** if the target is still reachable, so the document reports
-  what is currently true rather than what was true when it was logged.
-
-## Required sections, in order
-
-1. **Intro and context** — target, environment and stack, versions, verification date.
-2. **Findings** — one per finding, each structured as **mechanism → evidence → fix**,
-   plus a sources line linking every feature to its authoritative reference: the
-   official dev note or announcement, the issue or pull request, and the tracker ticket.
-3. **Stack facts** — verified environment details.
-4. **Tested and cleared** — non-issues, explicitly, so nobody re-chases them. This
-   section saves the recipient more time than the findings do.
-5. **Not covered — honest gaps.**
-6. **How this was tested** — methods in prose; **prompts verbatim in code blocks**, so
-   the recipient can re-run them; and tooling, each item labeled by actual use.
-7. **Consolidated sources** — every public link gathered in one list at the bottom.
-
-## The two rules that are easiest to get wrong
-
-### Confidential and privately-disclosed findings
-
-For anything under coordinated disclosure, or any unpatched security issue: reduce it to
-a **bare acknowledgment.** For example — *"a separate security issue was identified and
-responsibly disclosed through a private channel; details are withheld."*
-
-Scrub **all** traces: the mechanism, endpoint and function names, severity scoring, the
-reproduction, the specific commit or pull request, and even the name of the disclosure
-platform. Then **grep the finished file to prove zero traces remain** before handing it
-off. Believing you scrubbed it is not the same as checking.
-
-If it is unclear which findings are confidential, ask before packaging — not after.
-
-### Accuracy labels
-
-Label every tool, skill, and method by **actual use**: `used`, `staged`, or `available`.
-Never imply that a tool or model did work it did not do.
-
-This matters more than it sounds. A methods section that lists an impressive tool chain
-reads as authoritative, and a reader will reasonably assume every item in that list
-touched the work. If the real analysis ran through a custom harness and the packaged
-tools were merely installed, say so — and add a one-line accuracy note stating plainly
-which component actually performed the reasoning.
-
-Overstating your tooling is the most common quiet dishonesty in technical reports, and
-it is entirely avoidable with a three-word label per line.
+- **Output rules** (one self-contained file, public links only, verify each repo link
+  resolves logged-out before including it, a confidentiality banner, re-verify findings
+  live) and the **required section order** (intro/context → findings as mechanism → evidence
+  → fix → stack facts → tested-and-cleared → honest gaps → how-tested with verbatim prompts
+  → consolidated sources) → [`workflows/security-audit-handoff.md`](../skills/comprehensive-documentation-engineering/workflows/security-audit-handoff.md)
+  and [`templates/audit-handoff.md`](../skills/comprehensive-documentation-engineering/templates/audit-handoff.md).
+- **The two rules easiest to get wrong** — reduce a privately-disclosed finding to a bare
+  acknowledgment and *grep the finished file to prove zero traces remain*, and label every
+  tool/skill/method by actual use (`used` · `staged` · `available` · `authored`) with an
+  accuracy note naming which component did the reasoning → [`references/security-documentation.md`](../skills/comprehensive-documentation-engineering/references/security-documentation.md).

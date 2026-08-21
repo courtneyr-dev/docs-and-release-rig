@@ -94,12 +94,12 @@ first render.
 
 ---
 
-## The rule
+## The rule this retro produced
 
-A screenshot is evidence of appearance, not evidence of behavior — a point made more
-formally in `../3-security-methods/09-evidence-and-validation-standard.md`, where "a
-screenshot is not runtime proof" is an explicit guardrail.
-
-But a screenshot pass **is** the cheapest available audit of documentation language,
-because you are already looking at every control the doc names. Take the label-diff
-while you are there.
+Two rules came out of this pass, both now canonical in the skill: **a screenshot is
+evidence of appearance, not behavior** (behavior claims go through firing —
+[`references/evidence-and-validation.md`](../skills/comprehensive-documentation-engineering/references/evidence-and-validation.md)),
+and **a screenshot pass is the cheapest audit of documentation language**, because you're
+already looking at every control the doc names — so take the label-diff while you're
+there ([`workflows/verify-ui.md`](../skills/comprehensive-documentation-engineering/workflows/verify-ui.md),
+[`references/ui-verification.md`](../skills/comprehensive-documentation-engineering/references/ui-verification.md)).

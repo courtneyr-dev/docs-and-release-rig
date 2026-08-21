@@ -1,5 +1,9 @@
 # Release-tracking cadence — staying current on a moving release
 
+<!-- canonical-source-banner -->
+> **The reusable method here is now canonical in the agent skill.** It lives in executable form at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`references/release-documentation.md`](../skills/comprehensive-documentation-engineering/references/release-documentation.md) · [`references/evidence-and-validation.md`](../skills/comprehensive-documentation-engineering/references/evidence-and-validation.md). This page is kept as the **real-work provenance**: the retro, worked example, and prompts that produced the rule. For the current method, follow the skill; read this for the evidence behind it.
+
+
 **Date:** July 24, 2026 · **Cycle:** WordPress 7.1 (Beta 1 July 15 → GA August 19)
 
 The core lesson, stated plainly: **during an active beta → RC → GA cycle, our knowledge
@@ -44,56 +48,19 @@ Two more lessons from the same window:
 
 ---
 
-## The source hierarchy
+## The method this retro produced
 
-This is the single most useful artifact in this file. When two sources conflict, the
-higher one wins — no debate, no averaging:
+The retro above earned three artifacts that are now canonical in the skill — read them
+there, not here, so there's one copy to keep current:
 
-1. **Our own runtime test on the current build.** Highest authority. It is the only
-   source that describes what the software *does* rather than what someone believes it
-   does.
-2. **The dev note or field guide** on the project's official developer blog.
-3. **The diff** — the actual commit range in the core and feature-plugin repositories.
-4. **The community "source of truth" roundup.** Useful for discovering items you missed;
-   never a citation, and never copy its phrasing.
-5. **Our memory and older notes.** Lowest. Treat as a lead, not a fact.
-
-Note where reading the beta source code sits: **below a dev note**. When a dev note
-lands, go back and re-check everything you inferred from code before the note existed.
-That single rule would have caught both of the July 22 errors.
-
----
-
-## The daily sweep
-
-Run this each working session during a release, **before** touching any deliverable:
-
-1. **Sweep the last 24–48 hours** — the project's core blog and dev-note tag, the test
-   team's blog, the release milestone in the issue tracker, the compare views for the
-   core and feature-plugin repositories, and the relevant chat channels. Note anything
-   dated since the last sweep.
-2. **Diff the sweep against our docs.** Does anything new contradict, add to, or make
-   public something currently written down?
-3. **Correct, and date the delta.** For anything already shared with other people, log a
-   dated update note that states explicitly what changed since the last shared version.
-   Readers need the delta, not a silently-edited document.
-4. **Re-verify changed features** on a current build where testable. Do not promote a
-   reading of code or a dev note to "confirmed" without a runtime check.
-5. **Swap draft links for public ones** as dev notes and the field guide publish.
-
-## Milestone triggers — expect churn at each
-
-- **Weekly betas:** features still get added, fixed, and punted. A large number of
-  tickets remain milestoned late into the cycle.
-- **RC1:** the field guide and dev notes finalize. Reconcile the entire coverage map
-  here. The feature set should freeze at this point.
-- **RC2:** bug fixes only. Confirm nothing previously documented got reverted.
-- **GA:** final link swap; verify every claim against the shipped build.
-
-## Standing re-checks, every pass
-
-- Does the feature under test actually engage on this tier, or is it silently falling
-  back? A silent fallback means the documented benefit does not exist for that reader.
-- Plugin-compatibility surfaces: removed components and newly-unconditional behavior.
-- Does the integrity/checksum baseline still match the new build?
-- Are previously-reported findings still present in the latest build?
+- **The source hierarchy** (runtime test on the current build > official dev note > the
+  diff > community roundup > memory; and crucially, *reading implementation code ranks
+  below a published dev note* — the exact trap that made both July 22 errors) →
+  [`references/release-documentation.md`](../skills/comprehensive-documentation-engineering/references/release-documentation.md)
+  and the evidence regimes in [`references/evidence-and-validation.md`](../skills/comprehensive-documentation-engineering/references/evidence-and-validation.md).
+- **The daily sweep** (sweep 24–48h of authoritative sources → diff against the docs →
+  correct and *date the delta* → re-verify on a current build → swap draft links) →
+  the re-anchor phase in [`workflows/test-release.md`](../skills/comprehensive-documentation-engineering/workflows/test-release.md).
+- **Milestone triggers and standing re-checks** (RC1 reconcile + freeze, RC2 bugfix-only,
+  GA final verify; and every pass: does the feature actually engage on this tier or
+  silently fall back?) → [`references/release-documentation.md`](../skills/comprehensive-documentation-engineering/references/release-documentation.md).

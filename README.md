@@ -16,6 +16,36 @@ open [`index.html`](index.html) locally, or enable GitHub Pages on this repo.
 
 ---
 
+## The agent skill (start here)
+
+These methods are now packaged as a portable **agent skill** you can install and run:
+[**`skills/comprehensive-documentation-engineering/`**](skills/comprehensive-documentation-engineering/).
+
+It combines the Diátaxis framework with everything in this rig — documentation auditing, information
+architecture, developer experience, governance, release testing, UI verification, evidence
+discipline, and security-safe reporting — as one coherent practice an agent (Claude Code, Cursor,
+and others) can use to plan, write, audit, restructure, synchronize, verify, test, and hand off
+documentation. It ships its own [`SKILL.md`](skills/comprehensive-documentation-engineering/SKILL.md),
+21 reference sheets, 9 workflows, 12 templates, 7 safe/dry-run scripts, a behavioral test suite, and
+full source provenance.
+
+**The skill is now the canonical, executable form of the methods below.** The numbered documents in
+this repo are kept as the **real-work provenance** — the retros, worked examples, and verbatim
+prompts (WordPress 7.1, my own plugins) that produced each rule. Each method doc points up to its
+canonical home in the skill; read the docs for the evidence, follow the skill for the method.
+
+Install it (Claude Code):
+
+```bash
+cp -R skills/comprehensive-documentation-engineering ~/.claude/skills/
+```
+
+Other runtimes and the clone-symlink route are in [SETUP.md](SETUP.md). Note the skill subtree
+carries **its own dual MIT + CC BY-SA 4.0 license** (it adapts the Diátaxis framework), separate
+from this repo's CC0 — see [Licensing](#license).
+
+---
+
 ## Start here
 
 If you have ten minutes, read these four in order:
@@ -36,7 +66,11 @@ If you have ten minutes, read these four in order:
 
 ---
 
-## Contents
+## Contents — the real-work provenance behind the skill
+
+These are the retros, standards, and worked examples the skill distills. The **method** in each is
+now canonical in [`skills/comprehensive-documentation-engineering/`](skills/comprehensive-documentation-engineering/);
+these pages carry the **evidence** — the WordPress 7.1 cycle and my own plugins — that produced it.
 
 ### 1 · Documentation practice
 
@@ -122,8 +156,17 @@ transferable part.
 
 ## License
 
-[CC0 1.0 Universal](LICENSE) — public domain. Use it, adapt it, ship it. No attribution required,
+This repository's own content — the numbered method/provenance docs, README, SETUP, and index — is
+[CC0 1.0 Universal](LICENSE): public domain. Use it, adapt it, ship it. No attribution required,
 though I'd enjoy hearing about it.
+
+**One exception, by subtree:** the vendored skill at
+[`skills/comprehensive-documentation-engineering/`](skills/comprehensive-documentation-engineering/)
+carries **its own dual license** — MIT for its original workflow/tooling and CC BY-SA 4.0 for the
+reference sheets that adapt the [Diátaxis](https://diataxis.fr) framework (each such sheet has an
+attribution header). That subtree's own [`LICENSE`](skills/comprehensive-documentation-engineering/LICENSE)
+governs it, **not** this repo's CC0. Diátaxis is the work of Daniele Procida; the skill adapts it and
+is not endorsed by him or by any source author. Vendoring the skill here does not relicense it.
 
 **Courtney Robertson** · [courtneyr.dev](https://courtneyr.dev) ·
 [@courtneyr-dev](https://github.com/courtneyr-dev)

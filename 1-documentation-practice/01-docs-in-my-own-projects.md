@@ -1,5 +1,9 @@
 # Documentation in my own projects
 
+<!-- canonical-source-banner -->
+> **Provenance for the agent skill.** The transferable pattern in this page is generalized in the skill at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`references/information-architecture.md`](../skills/comprehensive-documentation-engineering/references/information-architecture.md). This page is the unique real-work record behind it.
+
+
 Published documentation sites, the repositories behind them, and the distribution listings they
 support. **Every link below was verified for a logged-out visitor** — and for
 WordPress.org plugin listings, verified against the plugins API

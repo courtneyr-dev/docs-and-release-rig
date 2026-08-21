@@ -1,5 +1,9 @@
 # 11 · External-PR audit: a worked case
 
+<!-- canonical-source-banner -->
+> **Provenance for the agent skill.** The transferable pattern in this page is generalized in the skill at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`references/beta-rc-testing.md`](../skills/comprehensive-documentation-engineering/references/beta-rc-testing.md) · [`references/evidence-and-validation.md`](../skills/comprehensive-documentation-engineering/references/evidence-and-validation.md). This page is the unique real-work record behind it.
+
+
 One afternoon on [Post Formats for Block Themes](https://github.com/courtneyr-dev/post-formats-for-block-themes):
 two pull requests from an outside contributor, both correct in diagnosis, one broken in
 implementation — and every method in this rig got exercised on the way to merging them. This is the

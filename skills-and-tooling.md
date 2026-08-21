@@ -17,6 +17,17 @@ you.
 
 ---
 
+## The documentation-engineering skill (vendored here)
+
+The primary agent skill in this repo — the canonical, executable form of every method the
+numbered docs describe.
+
+| Skill | Purpose | Use here |
+|---|---|---|
+| [`comprehensive-documentation-engineering`](skills/comprehensive-documentation-engineering/) | Diátaxis + documentation audit, IA, DX, governance, release testing, UI verification, evidence discipline, and security-safe handoff — one coherent practice. Ships SKILL.md, 21 references, 9 workflows, 12 templates, 7 scripts, a behavioral test suite, and full provenance. Dual MIT + CC BY-SA 4.0. | **authored · used** (this repo's methods are its provenance) |
+
+---
+
 ## Testing & environment tooling
 
 | Tool | Use | Link |

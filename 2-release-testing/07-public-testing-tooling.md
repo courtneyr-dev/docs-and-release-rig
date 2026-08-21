@@ -1,5 +1,9 @@
 # Public release-testing tooling
 
+<!-- canonical-source-banner -->
+> **Provenance for the agent skill.** The transferable pattern in this page is generalized in the skill at [`../skills/comprehensive-documentation-engineering/`](../skills/comprehensive-documentation-engineering/) — see [`references/beta-rc-testing.md`](../skills/comprehensive-documentation-engineering/references/beta-rc-testing.md). This page is the unique real-work record behind it.
+
+
 The runbook in document 06 doesn't start from nothing. The prior release cycle (WordPress 7.0)
 produced **public, reusable testing tooling** that I built and shipped openly, and that the 7.1
 cycle was designed to fork and extend.

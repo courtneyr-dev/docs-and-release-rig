@@ -1,6 +1,6 @@
 ---
 name: comprehensive-documentation-engineering
-description: Use when working on documentation as an engineering practice — writing or reviewing tutorials, how-to guides, reference, or explanation (Diátaxis); auditing or restructuring an existing doc set; planning a new documentation system or information architecture; keeping docs synchronized with code changes and releases; verifying technical claims, code samples, or UI labels against reality; beta/RC release testing and reporting; packaging security-sensitive audit findings; or setting documentation governance (ownership, freshness, versioning, localization). Triggers include "write docs", "document this", "docs audit", "Diátaxis", "restructure the docs", "release notes", "field guide", "beta testing", "verify the docs", "audit handoff", "docs strategy". NOT for marketing copy, fiction, or general prose editing; for pure security exploitation work without a documentation deliverable, use a dedicated security skill.
+description: "Use when the user says 'write docs', 'document this', 'docs audit', 'Diátaxis', 'restructure the docs', 'release notes', 'field guide', 'verify the docs', or 'docs strategy', or when tutorials, how-tos, reference, or explanation need writing, review, or governance. Release testing goes to wp-release-party; audit handoffs to wordpress-audit-handoff."
 license: MIT (workflow and original synthesis) AND CC-BY-SA-4.0 (Diátaxis-adapted reference sheets — see LICENSE)
 metadata:
   version: 1.0.0

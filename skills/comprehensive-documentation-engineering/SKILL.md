@@ -3,7 +3,7 @@ name: comprehensive-documentation-engineering
 description: "Use when the user says 'write docs', 'document this', 'docs audit', 'Diátaxis', 'restructure the docs', 'release notes', 'field guide', 'verify the docs', or 'docs strategy', or when tutorials, how-tos, reference, or explanation need writing, review, or governance. Release testing goes to wp-release-party; audit handoffs to wordpress-audit-handoff."
 license: MIT (workflow and original synthesis) AND CC-BY-SA-4.0 (Diátaxis-adapted reference sheets — see LICENSE)
 metadata:
-  version: 1.0.0
+  version: 1.2.0
   provenance: provenance/source-provenance summary in references/source-provenance.md
 ---
 
@@ -47,6 +47,7 @@ Pick the row that matches the request; load the listed files; follow the listed 
 | Audit/testing results packaged for someone else | **Handoff** | `workflows/security-audit-handoff.md` + `templates/audit-handoff.md` |
 | Strategy: IA, DX, governance, style, localization, diagrams | **Advise** | the matching reference file (see index below) |
 | Repo mechanics around docs work: committing changes, a failing CI run, pinning workflow actions, branch overview, diagram export, non-English content | **Repo workflow** | `references/repo-workflow-practices.md` |
+| Docs for a named docs site or docs repo with its own frontmatter, components, navigation, or redirects | **Site profile** (then route again) | `references/site-profiles.md` + `templates/site-profile.md`, loaded before the mode's own files |
 
 **Decision tree for ambiguous requests:** existing docs mentioned → Audit first (inventory before judging). A specific goal + a specific document → Write/revise. "Everything"/"the whole doc set"/"generate docs" → Plan/generate. A diff, PR, or release mentioned → Change-driven or Release. "Is this true / does this work" → Validate. When still unsure, ask which outcome they need — assessed, planned, written, moved, synchronized, verified, or reported.
 
@@ -97,8 +98,8 @@ A task in this skill is done when: the mode's output artifact exists and is fill
 ## Reference index (load on demand)
 
 Foundations & doctrine: `diataxis-foundations.md` · `compass-and-classification.md` · type sheets `tutorials.md`, `how-to-guides.md`, `reference.md`, `explanation.md` · `anti-patterns.md`
-Architecture & content: `information-architecture.md` · `content-types.md` · `style-overrides.md` · `diagrams.md`
+Architecture & content: `information-architecture.md` · `content-types.md` · `style-overrides.md` · `diagrams.md` · `site-profiles.md`
 Practice areas: `documentation-audits.md` · `developer-experience.md` · `governance-and-freshness.md` · `release-documentation.md` · `beta-rc-testing.md` · `evidence-and-validation.md` · `ui-verification.md` · `security-documentation.md` · `accessibility-and-localization.md` · `repo-workflow-practices.md`
 Provenance & licensing: `source-provenance.md`
 
-Templates live in `templates/`, deterministic tooling in `scripts/` (all safe/dry-run by default; heuristic outputs are candidates for review, never verdicts), and the skill's own test suite in `tests/`.
+Templates live in `templates/` (including `doc-review-checklist.md`, run before any single doc ships), deterministic tooling in `scripts/` (all safe/dry-run by default; heuristic outputs are candidates for review, never verdicts), and the skill's own test suite in `tests/`.

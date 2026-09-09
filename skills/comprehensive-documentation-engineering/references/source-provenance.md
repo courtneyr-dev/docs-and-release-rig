@@ -1,6 +1,6 @@
 # Source provenance and attribution
 
-This skill is an original synthesis of nine sources. It does not reproduce any source verbatim at length; it re-expresses methods and merges duplicated rules into canonical form. The full research report, inspection record, conflict-resolution log, and the capability-to-file traceability matrix live in `provenance/research-report.md`, `provenance/capability-ledger.md`, and `provenance/traceability-matrix.md`.
+This skill is an original synthesis of ten sources (nine at 1.0.0; a tenth added at 1.2.0). It does not reproduce any source verbatim at length; it re-expresses methods and merges duplicated rules into canonical form. The full research report, inspection record, conflict-resolution log, and the capability-to-file traceability matrix live in `provenance/research-report.md`, `provenance/capability-ledger.md`, and `provenance/traceability-matrix.md`.
 
 **No source author endorses this combined skill.** In particular, Diátaxis is the work of Daniele Procida; this skill encodes and adapts the framework but is not endorsed by him or by any other source author.
 
@@ -17,6 +17,9 @@ This skill is an original synthesis of nine sources. It does not reproduce any s
 | 7 | anivar/developer-docs-framework | Anivar Aravind | MIT (upstream methods have own licenses) | `c0e9445` |
 | 8 | Diátaxis (diataxis.fr / evildmp repo) | Daniele Procida | CC BY-SA 4.0 | `957c09c` |
 | 9 | courtneyr-dev/docs-and-release-rig | Courtney Robertson | CC0 1.0 | `d9ca62d` |
+| 10 | [jazzsequence/claude-skill-pantheon-docs-writer](https://github.com/jazzsequence/claude-skill-pantheon-docs-writer) | Chris Reynolds | MIT per README; **no LICENSE file in the repo** (GitHub reports no license; plugin manifest has no license field) | `78451e5`, retrieved 2026-09-09 |
+
+Source 10 (added 1.2.0) is a complete house-style profile for docs.pantheon.io. Its general shape became `site-profiles.md` and `templates/site-profile.md`; its review checklist, release-note authoring rules, inclusive-language table, redirect discipline, procedural mechanics, and "declared field is not a consumed field" lesson landed in the files named in `provenance/traceability-matrix.md` § S10. Because the repo carries only a README statement of MIT, everything from it is re-expressed rather than copied, and the README statement is cited as the license claim. Ask the author to add a LICENSE file before treating any of it as quotable.
 
 Source 7 itself builds on Diátaxis (CC BY-SA 4.0), Google OpenDocs (Apache-2.0), the Good Docs Project (CC BY 4.0), the Google Developer Documentation Style Guide (CC BY 4.0), and observed Stripe/Canonical practice; those upstreams are credited where their material appears. Source 4's C4 material derives from c4model.com (Simon Brown, CC BY 4.0).
 

@@ -4,6 +4,27 @@ All notable changes to this skill are documented here. Format loosely follows
 Keep a Changelog; this skill versions its own behavior (see `governance-and-freshness.md`
 on why that matters).
 
+## [1.2.0] — 2026-09-09
+
+### Added
+- Tenth source: Chris Reynolds' (jazzsequence) [claude-skill-pantheon-docs-writer](https://github.com/jazzsequence/claude-skill-pantheon-docs-writer) (`78451e5`, MIT per README, no LICENSE file), read in full and re-expressed. Row 10 in `references/source-provenance.md`; S10 in the ledger and traceability matrix; CITATION.cff reference.
+- `references/site-profiles.md`: the site-profile concept — the build-specific mechanics (frontmatter schema, page species, file locations, components, fence metadata, navigation registration, redirects, terminology, contribution workflow, review-date field) that a specific docs site imposes, kept out of the method sheets and loaded only when the docs target that site. Pantheon kept as the credited worked example. Router row and reference-index entry.
+- `templates/site-profile.md`: fill-in profile with `observed`/`inferred` evidence per slot.
+- `templates/doc-review-checklist.md`: single-document pre-delivery checklist, universal rows plus profile-supplied rows; wired into `write-or-revise.md` step 6.
+- `references/content-types.md`: release-note authoring rules (belongs/doesn't, go-live dating, filename-as-URL, feed-order timestamp, message-carrying headings, sentence case, three body shapes, action-required tagging); troubleshooting headings carry the error verbatim.
+- `references/accessibility-and-localization.md`: inclusive-language substitution table (ableist, violent, gendered, racial, exclusionary framing).
+- `references/how-to-guides.md`: procedural mechanics (orient before instructing, variables declared once, `1.` numbering, verbatim error text, output as code).
+- `references/evidence-and-validation.md`: "a declared field is not a consumed field" — find the code that reads a metadata field before documenting its effect.
+- `workflows/restructure-docs.md`: one redirect per old URL including sub-pages, path form, PR redirect table and label.
+- `workflows/write-or-revise.md`: inputs to gather, site-profile load step.
+- Evals `site-01..03` (profile load before drafting, release-note divergence, declared-vs-consumed metadata).
+
+### Fixed
+- Version drift: `SKILL.md` frontmatter and `CITATION.cff` still said 1.0.0 while this changelog was at 1.1.1. Both now carry the current version; bump all three on every change (rule adopted from source 10's maintenance notes).
+
+### Notes
+- Behavioral eval run for the new evals **not performed** in this release; only the structural validators (`scripts/validate_skill.py`, `tests/check_evals.py`) ran. Record a run in `provenance/eval-run-report.md` before relying on `site-*` assertions.
+
 ## [1.1.1] — 2026-08-20
 
 ### Fixed

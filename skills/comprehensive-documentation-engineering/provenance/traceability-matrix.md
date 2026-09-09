@@ -148,6 +148,19 @@ Two indexes prove completeness from both directions. The per-capability rows (ID
 | repo-specific lint for recurring findings | GOV-LINT-1 | `references/governance-and-freshness.md` |
 | skill-description advice ("when to use") | PKG-DESC-1 | `SKILL.md` |
 
+### S10 — jazzsequence/claude-skill-pantheon-docs-writer (MIT per README; added 2026-09-09)
+| Contribution | Capability | Destination file(s) |
+|---|---|---|
+| whole-site house-style profile (frontmatter, species, locations, components, fence metadata, nav files, redirect map, terminology, PR workflow) | SITE-PROF-1 | `references/site-profiles.md`, `templates/site-profile.md`, `SKILL.md`, `workflows/write-or-revise.md` |
+| inputs to gather | SITE-INPUT-1 | `workflows/write-or-revise.md` |
+| review checklist incl. mechanics | SITE-CHECK-1 | `templates/doc-review-checklist.md`, `workflows/write-or-revise.md` |
+| release-note authoring (belongs/doesn't, dating, filename-URL, sentence case, body patterns, action-required) | SITE-RN-1 | `references/content-types.md`, `references/site-profiles.md` |
+| `innav` declared-but-unconsumed maintenance note | SITE-META-1 | `references/evidence-and-validation.md`, `references/site-profiles.md` |
+| redirect rules + PR label/table | SITE-REDIR-1 | `workflows/restructure-docs.md`, `templates/doc-review-checklist.md` |
+| orient-before-instruct, variables pattern, verbatim error headings, screenshot hygiene | SITE-MECH-1 | `references/how-to-guides.md`, `references/content-types.md`, `templates/doc-review-checklist.md` |
+| inclusive-language table | SITE-INCL-1 | `references/accessibility-and-localization.md` |
+| Google style as fallback where the house guide is silent | (already STYLE overlay) | `references/style-overrides.md` (unchanged; referenced from the worked example) |
+
 ## B · Shipped file → capabilities it carries → sources
 
 | File | Principal capabilities | Sources |
@@ -192,10 +205,13 @@ Two indexes prove completeness from both directions. The per-capability rows (ID
 | `scripts/compare_ui_labels.py` | UI-DIFF-1 | S9 |
 | `scripts/scrub_check.py` | SEC-SCRUB-1 | S9 |
 | `scripts/validate_skill.py`, `tests/check_evals.py` | PKG-EVAL-1, TEST-SCHEMA-1 | S2 |
-| `tests/evals.json` | TEST-ACT/CLASS/BEHAVE/ADV-1 | prompt + S2 |
+| `tests/evals.json` | TEST-ACT/CLASS/BEHAVE/ADV-1, site-01..03 | prompt + S2 + S10 |
+| `references/site-profiles.md` | SITE-PROF-1, SITE-RN-1, SITE-META-1 | S10 |
+| `templates/site-profile.md` | SITE-PROF-1 | S10 |
+| `templates/doc-review-checklist.md` | SITE-CHECK-1, SITE-REDIR-1, SITE-MECH-1 | S10, plus the closing self-checks of S8-derived type sheets |
 
 ## Completeness check
-- **All 9 sources appear in index A** with named contributions and concrete destinations.
-- **All 21 references, 9 workflows, 12 templates, 7 scripts, and the test suite appear in index B** with the capabilities they carry and their sources.
+- **All 10 sources appear in index A** with named contributions and concrete destinations.
+- **All 22 references, 9 workflows, 14 templates, 7 scripts, and the test suite appear in index B** with the capabilities they carry and their sources.
 - **Zero "covered generally" cells.** Every capability ID in `capability-ledger.md` names a destination file; every destination file here names its capabilities and sources.
 - **Exclusions** (non-diataxis sibling skills in S2; WordPress-specific literal values in S9) are the only non-retained items, justified at the foot of `capability-ledger.md`.

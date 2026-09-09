@@ -28,6 +28,14 @@ Goals that amount to "call this function" · teaching or explaining · exhaustiv
 
 Title (*How to X*) → one sentence on what this achieves and when you'd need it → prerequisites → steps (conditional, branching where needed, code per step) → verify → troubleshooting/failure handling where relevant → related guides/reference/explanation links.
 
+## Procedural mechanics (MIT-sourced, after jazzsequence's pantheon-docs-writer)
+
+- **Orient before instructing.** Say where the reader is before naming a control: "Go to the Site Dashboard" then "Click **Backup**" — never a bare "click the Backup tab". Use the product's standard orientation links where a site profile lists them.
+- **Declare variables once, up front.** If steps substitute values (site name, environment, IDs), define them in the prerequisites as shell exports and reuse `$site`, `$env` throughout; lowercase for variables, uppercase for constants.
+- **Numbered steps use `1.` for every item** where the renderer auto-numbers, so reordering never renumbers by hand.
+- **Error text verbatim.** Where a step can fail, give the exact message the reader will see, as its own heading in troubleshooting, so search finds it.
+- **Show output as code, not pictures.** Terminal output is a code block (marked non-copyable where the site's fence metadata allows), never a screenshot.
+
 ## Closing self-check
 
 Compass every section and the whole: must land in informs-action / application. Per guide: **what human project does this serve?** The answer must not be a tool operation. Does any section teach, or turn into a reference table? Does the title say exactly what the guide shows?

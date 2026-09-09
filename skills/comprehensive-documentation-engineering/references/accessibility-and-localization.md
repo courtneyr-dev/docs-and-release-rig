@@ -15,7 +15,21 @@ Documentation and its examples must be usable by everyone:
 - **Sufficient contrast** in diagrams and screenshots — and the accessible choice is usually the clean screenshot (a demo color that trips a contrast warning looks bad in the shot too).
 - Treat **accessibility as its own docs-site page**, not a buried paragraph — it's one of the questions that blocks adoption for the people who must ask it (privacy is the other).
 
-Inclusive language (they/them; allowlist/blocklist; primary/replica; non-violent, non-ableist phrasing) is in `style-overrides.md`; it serves accessibility and global readability together.
+Inclusive language serves accessibility and global readability together; `style-overrides.md` carries the one-line rule, this table carries the substitutions.
+
+### Inclusive language substitutions
+
+Categories and examples after Pantheon's inclusive-language page as carried in jazzsequence's pantheon-docs-writer (MIT); re-expressed. Apply everywhere, including code comments, diagrams, and UI strings you quote.
+
+| Class | Avoid | Use instead |
+|---|---|---|
+| Ableist | sanity check · crazy, insane · blind to · crippled, lame · OCD (as a trait) | validation, verification · unexpected, surprising · unaware of, ignore · broken, slow, hindering · meticulous |
+| Violent | kill, murder, STONITH as metaphors · "one throat to choke" | stop, end, terminate the process · single point of accountability |
+| Gendered | he/she as default · "you guys" · "easy enough for your mom/grandma" | they/them · "you all", "everyone" · say who the audience is |
+| Racial | whitelist / blacklist · master (branch, primary) · master/slave · grandfathered in | allowlist / blocklist · main · primary / replica (or secondary) · legacy, exempt from |
+| Exclusionary framing | "victim of", "suffers from" · North-American idioms ("circle back", "put a pin in it") · unexpanded acronyms | "has", "experiences" · the literal phrase · expand on first use |
+
+When a project's own guide lists more terms, its list wins; when it conflicts with this table, follow the project and record the divergence in the site profile (`site-profiles.md`).
 
 ## Localization
 

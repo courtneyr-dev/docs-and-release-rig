@@ -11,7 +11,7 @@ Repo under git with a clean working tree so every change is one revert from undo
 ## 3 · Propose the migration (`templates/migration-plan.md`)
 - Per existing doc/section: **keep / move / split**, each move and each split-part naming its destination type and document (no destination = not approvable).
 - List file moves/renames, new files created, and the scope of any rewrite.
-- Detect inbound links and navigation dependencies now: `scripts/check_links.py` plus a search for references to the paths you'll move. List the redirects/link updates each move requires.
+- Detect inbound links and navigation dependencies now: `scripts/check_links.py` plus a search for references to the paths you'll move. List the redirects/link updates each move requires — **one redirect per old URL, sub-pages included**, not just the parent; a deleted page redirects to its nearest surviving relative. Where the site has a profile (`templates/site-profile.md`), use its redirect file, path form, and PR label.
 - Note reference **scope** if a reference reorg is involved (separately approvable).
 
 ## 4 · STOP for approval
@@ -21,7 +21,7 @@ Present the plan and scope; wait for an explicit yes on this specific plan. Pres
 - Prefer history-preserving moves (`git mv`) so authorship survives.
 - **A move is a rewrite:** content relocated into a type is held to that type's rules and closing self-check exactly like new content — reference tables, teaching, or instruction that arrive inside moved content are rewritten or linked out.
 - **Never delete.** Misplaced content is moved, never removed; the parking lot holds content awaiting a not-yet-written destination.
-- Update all cross-references and navigation config; create redirects where the platform supports them.
+- Update all cross-references and navigation config; create redirects where the platform supports them (relative paths, no trailing slash on the old path unless the platform wants one, permanent status). Put a From/To redirect table in the PR body so reviewers can verify coverage, and apply the repo's redirect label if it has one (discipline after jazzsequence's pantheon-docs-writer, MIT).
 - Prefer small, single-section steps over big-bang restructures; commit as you go.
 
 ## 6 · Verify preservation and links (don't claim it)

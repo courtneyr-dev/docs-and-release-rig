@@ -11,8 +11,8 @@ abstract: >-
   verification, evidence discipline, and security-safe reporting. Dual-licensed
   MIT AND CC-BY-SA-4.0 by file.
 license: "MIT AND CC-BY-SA-4.0"
-version: "1.0.0"
-date-released: "2026-08-20"
+version: "1.2.0"
+date-released: "2026-09-09"
 keywords:
   - documentation
   - diataxis
@@ -75,3 +75,13 @@ references:
       - name: "Courtney Robertson"
     repository-code: "https://github.com/courtneyr-dev/docs-and-release-rig"
     license: CC0-1.0
+  - type: software
+    title: "claude-skill-pantheon-docs-writer"
+    authors:
+      - name: "Chris Reynolds"
+    repository-code: "https://github.com/jazzsequence/claude-skill-pantheon-docs-writer"
+    license: MIT
+    notes: >-
+      License stated as MIT in the repository README; the repository carries no
+      LICENSE file as of commit 78451e5 (2026-09-09). Material is re-expressed,
+      not copied.

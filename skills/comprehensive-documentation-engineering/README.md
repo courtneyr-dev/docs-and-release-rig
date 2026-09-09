@@ -2,7 +2,7 @@
 
 An agent skill that treats documentation as an engineering practice. It combines the Diátaxis framework with documentation auditing, information architecture, developer experience, governance, release testing, UI verification, evidence discipline, and security-safe reporting — one coherent skill an agent can use to plan, write, audit, restructure, synchronize, verify, test, and hand off documentation.
 
-It is a synthesis of nine sources (see `references/source-provenance.md` and `provenance/`), reconciled and de-duplicated into canonical rules with full traceability.
+It is a synthesis of ten sources (see `references/source-provenance.md` and `provenance/`), reconciled and de-duplicated into canonical rules with full traceability.
 
 ## What it helps an agent do
 
@@ -17,6 +17,7 @@ It is a synthesis of nine sources (see `references/source-provenance.md` and `pr
 - **Test releases** (beta/RC/GA) with an environment-timed runbook and a definition of done.
 - **Package audit/security findings** responsibly — honest gaps, accuracy labels, confidentiality scrubbing.
 - **Govern** documentation: ownership, freshness cadences, versioning, localization, diagrams.
+- **Work inside a specific docs site's conventions** via a site profile (frontmatter, components, navigation, redirects, terminology), with docs.pantheon.io as the worked example after jazzsequence's pantheon-docs-writer.
 
 ## Structure
 
@@ -24,9 +25,9 @@ It is a synthesis of nine sources (see `references/source-provenance.md` and `pr
 comprehensive-documentation-engineering/
 ├── SKILL.md                 # router, compass, safety rules, evidence standards, quality bar
 ├── README.md · LICENSE · CHANGELOG.md · CITATION.cff
-├── references/              # 21 on-demand reference sheets (doctrine, practice areas, provenance)
+├── references/              # 22 on-demand reference sheets (doctrine, practice areas, site profiles, provenance)
 ├── workflows/               # 9 step-by-step workflows, one per mode
-├── templates/               # 12 fill-in artifacts (inventory, plan, receipt, reports, handoff, skeletons)
+├── templates/               # 14 fill-in artifacts (inventory, plan, receipt, reports, handoff, skeletons, site profile, review checklist)
 ├── scripts/                 # 7 safe/dry-run tools (inventory, links, mixed-doc, examples, ui-labels, scrub, validate)
 ├── tests/                   # evals.json + structural validators + fixtures
 └── provenance/              # research report, capability ledger, traceability matrix
@@ -67,4 +68,4 @@ Dual-licensed by file — MIT for original workflow/logic/tooling, CC BY-SA 4.0 
 
 ## Author
 
-Synthesized for Courtney Robertson, 2026-08-20. Sources credited in `references/source-provenance.md`.
+Synthesized for Courtney Robertson, 2026-08-20; site-profile material added 2026-09-09 from Chris Reynolds' pantheon-docs-writer. Sources credited in `references/source-provenance.md`.

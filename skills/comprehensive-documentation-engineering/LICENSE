@@ -71,7 +71,9 @@ credited to: Romain Lespinasse (agent-skills, MIT); Keith Patton
 CC-BY-SA-4.0); Sam McLeod (agentic-coding, Apache-2.0); Anivar Aravind
 (developer-docs-framework, MIT, itself building on Google OpenDocs [Apache-2.0],
 the Good Docs Project [CC BY 4.0], and the Google Developer Documentation Style
-Guide [CC BY 4.0]); and Courtney Robertson (docs-and-release-rig, CC0 1.0).
+Guide [CC BY 4.0]); Courtney Robertson (docs-and-release-rig, CC0 1.0); and
+Chris Reynolds (claude-skill-pantheon-docs-writer, MIT as stated in its README;
+no LICENSE file in the repository at the time of use — material re-expressed).
 Full detail: references/source-provenance.md and provenance/research-report.md.
 
 No source author endorses this combined work.

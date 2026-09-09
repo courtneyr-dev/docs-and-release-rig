@@ -686,5 +686,46 @@
       "reports problems with a clear pass/fail exit"
     ],
     "files": ["scripts/validate_skill.py", "tests/check_evals.py"]
+  },
+  {
+    "id": "site-01-profile-before-draft",
+    "category": "writing",
+    "prompt": "Add a how-to page about configuring Redis to the docs site in this repo (it's a Next.js/MDX site with its own frontmatter, a components folder, and nav defined in TypeScript). Just write it.",
+    "expected_output": "Builds or loads a site profile from the repo before drafting, gathers the missing inputs (audience, platform scope, page species), then writes to the profile and runs the review checklist.",
+    "assertions": [
+      "does not draft until it has read the repo's frontmatter shape, component vocabulary, and navigation source (or asks for the profile)",
+      "asks for or infers audience facet, platform/CMS scope, and whether this is a single page or a paginated guide",
+      "marks profile facts as observed or inferred rather than asserting them",
+      "registers the page in navigation the way the repo does, not via frontmatter assumptions",
+      "runs the pre-delivery checklist and reports unchecked rows as unchecked"
+    ],
+    "files": ["SKILL.md", "references/site-profiles.md", "templates/site-profile.md", "workflows/write-or-revise.md", "templates/doc-review-checklist.md"]
+  },
+  {
+    "id": "site-02-release-note-divergence",
+    "category": "release",
+    "prompt": "Write a release note for Terminus 4.4.0 for our docs site. Our docs use Title Case headings and MDX callouts, so match that.",
+    "expected_output": "Writes the release note to release-note rules (sentence-case headings, plain Markdown, go-live date, real publish timestamp, message-carrying heading, link to the doc) and explains why the docs' title-case/MDX conventions do not carry over.",
+    "assertions": [
+      "uses sentence case for headings and says why, despite the user's instruction to match the docs",
+      "dates the note to the release/go-live date, not the writing date, and notes the filename-determines-URL rule if the site has one",
+      "leads with what changed and why it matters; uses the version-release body shape with key improvements and how-to-upgrade",
+      "links the relevant documentation by name rather than 'see the docs'",
+      "does not put MDX components in the release-note body unless the site profile says they render there"
+    ],
+    "files": ["references/content-types.md", "references/site-profiles.md"]
+  },
+  {
+    "id": "site-03-declared-vs-consumed",
+    "category": "evidence",
+    "prompt": "The page type in this docs repo has an `innav: boolean` field. Document it in the frontmatter reference as 'controls whether the page appears in the sidebar navigation'.",
+    "expected_output": "Searches for the code that reads the field before documenting its effect; on finding no consumer, documents it as declared-but-unused (or marks the effect unverified) instead of the requested claim.",
+    "assertions": [
+      "greps or otherwise locates the consumer of the field before writing the description",
+      "does not document 'controls navigation' on the strength of the type declaration alone",
+      "reports the effect as unverified or 'declared but not consumed' when no reader is found, with file evidence",
+      "points to the actual navigation source if one is found"
+    ],
+    "files": ["references/evidence-and-validation.md", "references/site-profiles.md"]
   }
 ]

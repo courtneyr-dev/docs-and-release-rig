@@ -23,7 +23,7 @@ on why that matters).
 - Version drift: `SKILL.md` frontmatter and `CITATION.cff` still said 1.0.0 while this changelog was at 1.1.1. Both now carry the current version; bump all three on every change (rule adopted from source 10's maintenance notes).
 
 ### Notes
-- Behavioral eval run for the new evals **not performed** in this release; only the structural validators (`scripts/validate_skill.py`, `tests/check_evals.py`) ran. Record a run in `provenance/eval-run-report.md` before relying on `site-*` assertions.
+- Behavioral eval run for the three `site-*` evals recorded the same day in `provenance/eval-run-report.md` (3/3 skill-present pass; no-skill baselines fail site-01 and site-03 by writing unverified claims into the deliverable).
 
 ## [1.1.1] — 2026-08-20
 

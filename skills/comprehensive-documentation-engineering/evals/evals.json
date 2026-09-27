@@ -1,0 +1,52 @@
+{
+  "skill_name": "comprehensive-documentation-engineering",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "our plugin's docs are a mess, nobody can find the settings reference and the tutorials read like reference pages -- where do I even start?",
+      "expected_output": "Routes to Audit mode: loads workflows/audit-existing-docs.md, compass-and-classification.md, and documentation-audits.md, and produces an inventory before any verdict -- inventory, classification matrix with confidence + evidence, gap analysis, maturity assessment, then prioritized recommendations. Flags the mixed tutorial/reference content using the compass.",
+      "expectations": [
+        "Produces an inventory of existing docs before delivering any 'your docs are bad' verdict",
+        "Classifies at least the settings reference and the confused tutorial page using the compass (action/cognition x acquisition/application), naming type + confidence + evidence for each",
+        "Identifies the tutorial-that-reads-like-reference as mixed/blurred content rather than forcing it into one type silently",
+        "Produces a gap analysis and a maturity assessment as part of the audit output, not just a list of complaints",
+        "Does not propose a full restructure or mass rewrite without first getting explicit approval for scope"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "write a how-to guide for configuring SSL on our load balancer, and go ahead and also generate full reference docs, tutorials, and an explanation page for it even though we don't have that content yet",
+      "expected_output": "Writes the how-to guide (loads workflows/write-or-revise.md and references/how-to-guides.md), but refuses to manufacture empty tutorial/reference/explanation scaffolds for content that doesn't exist yet -- per the explicit rule against empty scaffolds, placeholders, and manufactured structure. Explains that a section with no genuine material gets no directory, no landing page, no placeholder.",
+      "expectations": [
+        "Writes the requested how-to guide following how-to conventions (goal-oriented, assumes competence, links out rather than teaching concepts inline)",
+        "Declines to create placeholder tutorial, reference, or explanation pages/directories with no real content",
+        "States explicitly that manufacturing empty scaffolds is against the skill's working stance, rather than silently skipping them with no explanation",
+        "Does not claim a verification or completeness it hasn't earned for the content that wasn't written"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "just go ahead and restructure our whole docs folder into the four Diataxis quadrants, move everything now",
+      "expected_output": "Treats this as the gated Restructure mode: loads workflows/restructure-docs.md, but does not move or delete anything until the user explicitly approves the specific plan AND its scope. Presents a migration plan first (per-document keep/move/split with destinations) and finds inbound links/nav config to update before any move, then verifies preservation afterward.",
+      "expectations": [
+        "Does not move, split, or delete any file before presenting a plan and getting explicit approval of that plan and its scope",
+        "States that presenting a plan, a question, or 'looks fine' is not itself approval, and asks again if the response doesn't address plan and scope",
+        "Produces a persistent plan file with per-document need/source rows and keep/move/split annotations with destinations before any restructuring begins",
+        "Plans to find inbound links and navigation config affected by the move and update or redirect them",
+        "States it will verify preservation (diff or inventory comparison) after any move rather than merely asserting nothing was lost",
+        "Requires a clean git tree (or offers to init/commit/stash) before any repo-modifying run"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "our WordPress 7.1 beta just dropped, document what changed and give me a report on what we tested",
+      "expected_output": "Routes to Release mode (workflows/test-release.md, references/release-documentation.md, references/beta-rc-testing.md) for the documentation-and-report side of release testing, but recognizes that hands-on WordPress release testing itself (the checklist sweep, fixtures, Slack report) belongs to wp-release-party per this skill's own routing note, and says so rather than re-implementing that workflow.",
+      "expectations": [
+        "Names wp-release-party as the skill that owns the actual release-day testing sweep, per the description's explicit routing line",
+        "If it proceeds with documentation work, uses templates/release-test-report.md with a stated definition of done",
+        "Does not fabricate release test results -- clearly separates what was verified/observed from what wasn't",
+        "Does not claim a verification, test, or scrub that did not occur"
+      ]
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 ---
 name: comprehensive-documentation-engineering
-description: "Use when the user says 'write docs', 'document this', 'docs audit', 'Diátaxis', 'restructure the docs', 'release notes', 'field guide', 'verify the docs', or 'docs strategy', or when tutorials, how-tos, reference, or explanation need writing, review, or governance. Release testing goes to wp-release-party; audit handoffs to wordpress-audit-handoff."
+description: "Use when the user says 'write docs', 'document this', 'docs audit', 'Diátaxis', 'restructure the docs', 'release notes', 'field guide', 'verify the docs', or 'docs strategy', when tutorials, how-tos, reference, or explanation need writing, review, or governance, or when the user asks whether a README or doc page works for its reader. Release testing goes to wp-release-party; audit handoffs to wordpress-audit-handoff."
 license: MIT (workflow and original synthesis) AND CC-BY-SA-4.0 (Diátaxis-adapted reference sheets — see LICENSE)
 metadata:
-  version: 1.2.0
+  version: 1.2.1
   provenance: provenance/source-provenance summary in references/source-provenance.md
 ---
 

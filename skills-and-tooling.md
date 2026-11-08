@@ -116,8 +116,7 @@ would 404.
 | `wp-audit` | Audits owned plugins, proves each finding by firing it against a disposable local site, and spawns a fix task per confirmed bug | **authored · available** |
 | `wp-github-actions` | Sets up CI/CD for WordPress plugins — standards, linting, PHPUnit, PHPStan, dependency scanning, Playground PR previews, WordPress.org deployment | **authored · used** |
 | `wp-readme-optimizer` | Structured audit and rewrite of WordPress.org `readme.txt` listings, scored by section against an inferred target keyword | **authored · available** |
-| `wordpress-governance-wiki` | Maintains project-governance reference material | **authored · available** |
-| `wp-training` | WordPress training material development | **authored · available** |
+| `wiki-cycle` | Maintains project-governance reference material and WordPress training material as two of 18 registered wikis. Replaced the separate `wordpress-governance-wiki` and `wp-training` skills on 2026-09-04 | **authored · available** |
 | `better-documents` | Document and presentation review against communication best practices; applied at generation time, not as an afterthought. Adapted from Anil Dash's [Make better documents](https://www.anildash.com/2024/03/10/make-better-documents/) | **available** |
 | `technical-writing` | Drafts technical posts directly from a repository — reading commits, exploring files — while still in the code. Adapted from Rich Tabor's public collection at https://github.com/richtabor/agent-skills | **used** |
 | `anti-slop-git-writing` | Commit messages, PR descriptions, and issue reports that read like a specific person wrote them under normal time pressure | **available** |

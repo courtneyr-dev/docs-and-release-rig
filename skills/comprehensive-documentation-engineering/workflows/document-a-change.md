@@ -38,8 +38,12 @@ The last four catch the real documentation bugs (e.g. a dependency upgrade that 
 ## 4 · Update the affected docs
 Apply `write-or-revise.md` per affected document, in dependency order where several change. Verify claims and run samples (`references/evidence-and-validation.md`). For compatibility statements ("Tested up to X"), treat them as runtime claims: run the real suite, diff the bent surfaces, probe per finding, and state the evidence ceiling (`references/release-documentation.md`).
 
+If the change alters what users see, also run `workflows/verify-ui.md` steps 3–6 on the changed screens; the screenshots and the label-diff report are part of this mode's output.
+
 ## 5 · Emit the change-coverage receipt (`templates/change-coverage-receipt.md`)
 Fill every field: baseline→target, counts (commits, files, APIs, hooks, routes, schemas, dependencies, deprecations, removals), undocumented changes found, **and "entries NOT fully reviewed, and why"**. The receipt states, for the change: what changed · which user-facing behavior changed · which documents were evaluated · which were updated · which were intentionally left unchanged · evidence · remaining uncertainty.
+
+Put the filled receipt in the final message, or write it to a file and link it there; a summary table is not the receipt. For a PR-scoped docs sync, a checklist box that can't apply (no release, no lockfile change) gets `n/a — <reason>`, which counts as checked; a box with nothing beside it does not.
 
 ## 6 · The gate
 If any receipt row is blank or any checklist box is unchecked, the review is **not complete** — record the shortfall as a named untested area; don't paper over it. A blank row is a legitimate, honest place to stop; a blank row nobody noticed is a future correction. "Looks done" is not a stop condition.

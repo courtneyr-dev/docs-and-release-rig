@@ -2,7 +2,7 @@
 
 > Produced BEFORE declaring a change review complete. "We looked at everything" is an opinion; this turns it into an artifact someone else can check. A blank row is a legitimate stop — a blank row nobody noticed is a future correction.
 
-## Completeness reconciliation checklist
+## Completeness reconciliation checklist (check each box or write n/a — reason)
 - [ ] git changes reconciled with release notes
 - [ ] source reconciled with the released packages
 - [ ] documented deprecations reconciled with `@deprecated` annotations **and** runtime behavior

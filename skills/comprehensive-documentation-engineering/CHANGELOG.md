@@ -4,6 +4,25 @@ All notable changes to this skill are documented here. Format loosely follows
 Keep a Changelog; this skill versions its own behavior (see `governance-and-freshness.md`
 on why that matters).
 
+## [1.2.2] — 2026-11-08
+
+Lessons from a change-driven docs sync (two draft PRs, a Home launcher and a compact composer, in a WordPress plugin). The run skipped the receipt, committed 9 of 14 recaptured screenshots unviewed, took 4 capture runs, and added a behavior claim right after watching it fail.
+
+### Changed
+- `workflows/document-a-change.md` step 5: the filled receipt goes in the final message or a linked file; a summary table isn't the receipt. A box that can't apply in a PR-scoped sync gets `n/a — <reason>`.
+- `templates/change-coverage-receipt.md`: the checklist heading says to check each box or write n/a with a reason.
+- `workflows/document-a-change.md` step 4: a user-visible change also runs `verify-ui.md` steps 3–6, so screenshots and the label-diff report are part of this mode's output.
+- `workflows/verify-ui.md` step 4: view every image a capture run wrote before changing anything, batch fixes into one rerun, and list unviewed images as unverified.
+- `references/evidence-and-validation.md`: a capture that fails because the feature didn't behave disputes the doc claim; markers apply in final messages, commit messages, and code comments too.
+
+### Fixed
+- Version drift: `SKILL.md` said 1.2.1 while this changelog and `CITATION.cff` said 1.2.0. All three now say 1.2.2.
+
+## [1.2.1] — 2026-09-27
+
+### Changed
+- `SKILL.md` description names reader-fit questions about a README or doc page; two trigger evals adjusted (`a1fcb4b`). Recorded after the fact: the commit bumped `SKILL.md` only.
+
 ## [1.2.0] — 2026-09-09
 
 ### Added
